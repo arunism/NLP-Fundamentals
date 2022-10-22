@@ -1,4 +1,4 @@
-# Diving Deep to NLP
+# NLP Fundamentals
 
 Implementation of different Natural Language Processing concepts
 to enhance learnings from the basics to the advanced concepts of NLP.
@@ -10,4 +10,4 @@ to enhance learnings from the basics to the advanced concepts of NLP.
 
 ## Topics Covered
 
-- [Tokenization](https://github.com/arunism/Deep-Dive-to-NLP/blob/master/Tokenization)
+- [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization)
