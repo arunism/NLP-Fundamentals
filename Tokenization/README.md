@@ -39,3 +39,13 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
       <img src="./assets/spacy.jpg"><br/>
       <a href="https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/"><i>Source</i><a/>
     <p/>
+
+
+## References
+
+1. [NLTK Tokenizer Package Documentation](https://www.nltk.org/api/nltk.tokenize.html)
+2. [NLTK Tokenize – Complete Tutorial for Beginners](https://machinelearningknowledge.ai/nltk-tokenizer-tutorial-with-word_tokenize-sent_tokenize-whitespacetokenizer-wordpuncttokenizer/)
+3. [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
+4. [Spacy Tokenization Documentation](https://spacy.io/usage/linguistic-features#tokenization)
+5. [Complete Guide to Spacy Tokenizer with Examples](https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/)
+6. [TorchText Tokenizer Documentation](https://pytorch.org/text/stable/data_utils.html)
