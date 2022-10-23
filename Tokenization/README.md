@@ -41,6 +41,39 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
     <p/>
 
 
+- [TorchText](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/torchtext.ipynb)
+    
+    Torchtext is a PyTorch based library. Pytorch is an open source machine learning framework developed by
+    [Facebook](https://github.com/facebook). Torchtext is a collection of data processing utilities for text data and
+    popular datasets for natural language processing. If you are working with PyTorch on an NLP task than TorchText
+    would be one of the best things to check out.
+
+    TorchText facilitates tokenization using get_tokenizer() method. `get_tokenizer(tokenizer, language='en')`
+    generates a tokenizer function which in turn converts a string to its corresponding tokens. The `tokenizer`
+    argument can be either a callable function or a library (basic_english, spacy, subword, moses, toktok, revtok).
+
+
+- [TensorFlow Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/tensorflow.ipynb)
+    
+    Tensorflow is a free and open source library developed by [Google](https://github.com/google) for training
+    and inference of deep neural networks. In this repo, we shall use Keras API with the tensorflow backend.
+    Keras tokenizer focuses primarily on two methods:
+
+  - `fit_on_texts:` Updates internal vocabulary based on a list of texts. This method creates the vocabulary index
+    based on word frequency. So if you give it something like, "The cat sat on the mat." It will create a dictionary
+    s.t. word_index["the"] = 1; word_index["cat"] = 2 it is word -> index dictionary so every word gets a unique
+    integer value. 0 is reserved for padding. So lower integer means more frequent word (often the first few are
+    stop words because they appear a lot).
+
+  - `texts_to_sequences:` Transforms each text in texts to a sequence of integers. So it basically takes each word
+    in the text and replaces it with its corresponding integer value from the word_index dictionary. Nothing more,
+    nothing less, certainly no magic involved.
+
+Why don't combine them? Because you almost always fit once and convert to sequences many times. You will fit on
+your training corpus once and use that exact same word_index dictionary at train / eval / testing / prediction time
+to convert actual text into sequences to feed them to the network. So it makes sense to keep those methods separate.
+
+
 ## References
 
 1. [NLTK Tokenizer Package Documentation](https://www.nltk.org/api/nltk.tokenize.html)
@@ -49,3 +82,6 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
 4. [Spacy Tokenization Documentation](https://spacy.io/usage/linguistic-features#tokenization)
 5. [Complete Guide to Spacy Tokenizer with Examples](https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/)
 6. [TorchText Tokenizer Documentation](https://pytorch.org/text/stable/data_utils.html)
+7. [Tokenizing with TF Text](https://www.tensorflow.org/text/guide/tokenizers)
+8. [What does Keras Tokenizer method exactly do?](https://stackoverflow.com/questions/51956000/what-does-keras-tokenizer-method-exactly-do)
+9. [Guide to Subword Tokenizers by Tensorflow](https://www.tensorflow.org/text/guide/subwords_tokenizer)
