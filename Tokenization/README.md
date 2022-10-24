@@ -2,16 +2,29 @@
 
 Tokenization is one of the first steps in NLP pipeline.
 It is a technique to split a sentence, phrase, paragraph or an entire document to smaller units.
-These smaller units are called tokens. Tokens must not always be words. They can be either
-symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
+These smaller units are called tokens. Tokens must not always be words. It can be anything — 
+a word, a subword, or a character.
 
-> The program works well with python version >=3.8.0.
-> Make sure the requirements mentioned here are satisfied,
-> or the result may not be as expected.
+<p align="center">
+    <img src="./assets/tokenization.jpg"><br/>
+<p/>
+
+As illustrated in the figure above, tokenization is primarily categorised to three different groups.
+A `word-based` tokenization algorithm will break a text into words based on a delimiter. This technique leads
+to massive vocabulary size and large number of OOV tokens. This leads to heavier model and loss of information
+as the model will not learn anything about the OOV words. `Character-based` tokenizers split the raw text into
+individual characters. This results in a very small vocabulary and no or very few OOV tokens. The space and time
+complexity is reduced. Yet this technique is not considered the best because it results in very long sequences and
+a character does not carry useful meaning as a word does. A solution between these two techniques is `subword-based`
+tokenization. The subword splitting will help the model learn that the words with the same root word as “token” like
+“tokens” and “tokenizing” are similar in meaning. Subword-based tokenization algorithms uses the following principles:
+
+- Do not split the frequently used words into smaller subwords.
+- Split the rare words into smaller meaningful subwords.
 
 ## Methods Included
 
-- [NLTK](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/nltk.ipynb)
+- ### [NLTK](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/nltk.ipynb)
     
     This module is used for statistical natural language processing. It consists of module called `tokenize`
     with several methods that aids in splitting text to tokens like: `word_tokenize`, `sent_tokenize`,
@@ -23,7 +36,7 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
     <p/>
 
 
-- [Spacy](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/spacy.ipynb)
+- ### [Spacy](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/spacy.ipynb)
     
     In Spacy, the process of tokenizing a text into segments of words and punctuation is done in various steps.
     It processes the text from left to right.
@@ -41,7 +54,7 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
     <p/>
 
 
-- [TorchText](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/torchtext.ipynb)
+- ### [TorchText](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/torchtext.ipynb)
     
     Torchtext is a PyTorch based library. Pytorch is an open source machine learning framework developed by
     [Facebook](https://github.com/facebook). Torchtext is a collection of data processing utilities for text data and
@@ -53,7 +66,7 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
     argument can be either a callable function or a library (basic_english, spacy, subword, moses, toktok, revtok).
 
 
-- [TensorFlow Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/tensorflow.ipynb)
+- ### [TensorFlow Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/tensorflow.ipynb)
     
     Tensorflow is a free and open source library developed by [Google](https://github.com/google) for training
     and inference of deep neural networks. In this repo, we shall use Keras API with the tensorflow backend.
@@ -69,19 +82,22 @@ symbols and letters (., !, a, z, ...) or sentences or any other forms of text.
     in the text and replaces it with its corresponding integer value from the word_index dictionary. Nothing more,
     nothing less, certainly no magic involved.
 
-Why don't combine them? Because you almost always fit once and convert to sequences many times. You will fit on
-your training corpus once and use that exact same word_index dictionary at train / eval / testing / prediction time
-to convert actual text into sequences to feed them to the network. So it makes sense to keep those methods separate.
+  Why don't combine them? Because you almost always fit once and convert to sequences many times. You will fit on
+  your training corpus once and use that exact same word_index dictionary at train / eval / testing / prediction time
+  to convert actual text into sequences to feed them to the network. So it makes sense to keep those methods separate.
 
 
 ## References
 
-1. [NLTK Tokenizer Package Documentation](https://www.nltk.org/api/nltk.tokenize.html)
-2. [NLTK Tokenize – Complete Tutorial for Beginners](https://machinelearningknowledge.ai/nltk-tokenizer-tutorial-with-word_tokenize-sent_tokenize-whitespacetokenizer-wordpuncttokenizer/)
-3. [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
-4. [Spacy Tokenization Documentation](https://spacy.io/usage/linguistic-features#tokenization)
-5. [Complete Guide to Spacy Tokenizer with Examples](https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/)
-6. [TorchText Tokenizer Documentation](https://pytorch.org/text/stable/data_utils.html)
-7. [Tokenizing with TF Text](https://www.tensorflow.org/text/guide/tokenizers)
-8. [What does Keras Tokenizer method exactly do?](https://stackoverflow.com/questions/51956000/what-does-keras-tokenizer-method-exactly-do)
-9. [Guide to Subword Tokenizers by Tensorflow](https://www.tensorflow.org/text/guide/subwords_tokenizer)
+1. [Tokenization doesn't have to be slow !](https://notebook.community/huggingface/pytorch-transformers/notebooks/01-training-tokenizers)
+2. [NLTK Tokenizer Package Documentation](https://www.nltk.org/api/nltk.tokenize.html)
+3. [NLTK Tokenize – Complete Tutorial for Beginners](https://machinelearningknowledge.ai/nltk-tokenizer-tutorial-with-word_tokenize-sent_tokenize-whitespacetokenizer-wordpuncttokenizer/)
+4. [Python for Data Science and Machine Learning Bootcamp](https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/)
+5. [Spacy Tokenization Documentation](https://spacy.io/usage/linguistic-features#tokenization)
+6. [Complete Guide to Spacy Tokenizer with Examples](https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/)
+7. [TorchText Tokenizer Documentation](https://pytorch.org/text/stable/data_utils.html)
+8. [Tokenizing with TF Text](https://www.tensorflow.org/text/guide/tokenizers)
+9. [What does Keras Tokenizer method exactly do?](https://stackoverflow.com/questions/51956000/what-does-keras-tokenizer-method-exactly-do)
+10. [Guide to Subword Tokenizers by Tensorflow](https://www.tensorflow.org/text/guide/subwords_tokenizer)
+11. [Google Sentencepiece](https://github.com/google/sentencepiece)
+12. [A New Algorithm for Data Compression](https://www.derczynski.com/papers/archive/BPE_Gage.pdf)
