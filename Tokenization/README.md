@@ -6,7 +6,7 @@ These smaller units are called tokens. Tokens must not always be words. It can b
 a word, a subword, or a character.
 
 <p align="center">
-    <img src="./assets/tokenization.jpg"><br/>
+    <img src="./../Assets/tokenization/tokenization.jpg"><br/>
 <p/>
 
 As illustrated in the figure above, tokenization is primarily categorised to three different groups.
@@ -31,7 +31,7 @@ tokenization. The subword splitting will help the model learn that the words wit
     `wordpunct_tokenize`, `WhitespaceTokenizer`.
 
     <p align="center">
-        <img src="./assets/nltk.jpg"><br/>
+        <img src="./../Assets/tokenization/nltk.jpg"><br/>
         <a href="https://udemy.com/course/python-for-data-science-and-machine-learning-bootcamp"><i>Image source</i><a/>
     <p/>
 
@@ -49,7 +49,7 @@ tokenization. The subword splitting will help the model learn that the words wit
       If it matches, the substring is split into two tokens.
 
     <p align="center">
-      <img src="./assets/spacy.jpg"><br/>
+      <img src="./../Assets/tokenization/spacy.jpg"><br/>
       <a href="https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/"><i>Source</i><a/>
     <p/>
 
@@ -72,19 +72,49 @@ tokenization. The subword splitting will help the model learn that the words wit
     and inference of deep neural networks. In this repo, we shall use Keras API with the tensorflow backend.
     Keras tokenizer focuses primarily on two methods:
 
-  - `fit_on_texts:` Updates internal vocabulary based on a list of texts. This method creates the vocabulary index
-    based on word frequency. So if you give it something like, "The cat sat on the mat." It will create a dictionary
-    s.t. word_index["the"] = 1; word_index["cat"] = 2 it is word -> index dictionary so every word gets a unique
-    integer value. 0 is reserved for padding. So lower integer means more frequent word (often the first few are
-    stop words because they appear a lot).
+    - `fit_on_texts:` Updates internal vocabulary based on a list of texts. This method creates the vocabulary index
+      based on word frequency. So if you give it something like, "The cat sat on the mat." It will create a dictionary
+      s.t. word_index["the"] = 1; word_index["cat"] = 2 it is word -> index dictionary so every word gets a unique
+      integer value. 0 is reserved for padding. So lower integer means more frequent word (often the first few are
+      stop words because they appear a lot).
 
-  - `texts_to_sequences:` Transforms each text in texts to a sequence of integers. So it basically takes each word
-    in the text and replaces it with its corresponding integer value from the word_index dictionary. Nothing more,
-    nothing less, certainly no magic involved.
+    - `texts_to_sequences:` Transforms each text in texts to a sequence of integers. So it basically takes each word
+      in the text and replaces it with its corresponding integer value from the word_index dictionary. Nothing more,
+      nothing less, certainly no magic involved.
 
-  Why don't combine them? Because you almost always fit once and convert to sequences many times. You will fit on
-  your training corpus once and use that exact same word_index dictionary at train / eval / testing / prediction time
-  to convert actual text into sequences to feed them to the network. So it makes sense to keep those methods separate.
+    Why don't combine them? Because you almost always fit once and convert to sequences many times. You will fit on
+    your training corpus once and use that exact same word_index dictionary at train / eval / testing / prediction time
+    to convert actual text into sequences to feed them to the network. So it makes sense to keep those methods separate.
+
+
+- ### [Byte-Pair Encoding](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/bpe.ipynb)
+    
+    Byte-Pair Encoding, is a data compression algorithm that iteratively replaces the most frequent pair of bytes 
+    in a sequence with a single, unused byte.
+
+    `For example:` Let 'aaabdaaabac' be the string. Here 'aa' is the most frequent pair of bytes, so we replace it
+    with some unused byte, let's say 'Z'. Now the string becomes 'ZabdZabac'. 'ab' is now the most frequent pair,
+    we replace it with 'Y' and get 'ZYdZYac'. After the latest update the most frequent pair be 'ZY'. Replace it with
+    'X' so the obtained string be 'XdXac'.
+
+    To adapt this idea for word segmentation, instead of replacing frequent pair of bytes, we now merge
+    subword pairs that frequently occur. Let's elaborate it stepwise:
+
+    - We initialize the vocabulary representing each word as a sequence of characters, plus a special end-of-word
+      symbol '/w', which allows us to restore the original tokenization after translation. More on this below.
+    - Next, we iteratively count all symbol pairs and merge each occurrence of the most frequent pair (a, b) into ab.
+      Each merge operation produces a new symbol which represents a character n-gram.
+    - We'll keep repeating the previous process until the target vocabulary size is reached.
+
+    Why is end of word symbol '/w' important? Let's say there is a token 'est'. Both the words 'eastern' and 'smallest'
+    contain the subword 'est'. However, meanings of the subword between the two are quite different. With the
+    end of word symbol, if there is a token est/w, the model immediately interprets the subword represents the
+    terminating meaning of the word.
+
+    <p align="center">
+      <img src="./../Assets/tokenization/bpe.jpg"><br/>
+      <a href="https://www.computer.org/csdl/journal/tb/2020/05/08678449/1nJsrGwiJqg"><i>Image Source</i><a/>
+    <p/>
 
 
 ## References
@@ -99,5 +129,8 @@ tokenization. The subword splitting will help the model learn that the words wit
 8. [Tokenizing with TF Text](https://www.tensorflow.org/text/guide/tokenizers)
 9. [What does Keras Tokenizer method exactly do?](https://stackoverflow.com/questions/51956000/what-does-keras-tokenizer-method-exactly-do)
 10. [Guide to Subword Tokenizers by Tensorflow](https://www.tensorflow.org/text/guide/subwords_tokenizer)
-11. [Google Sentencepiece](https://github.com/google/sentencepiece)
-12. [A New Algorithm for Data Compression](https://www.derczynski.com/papers/archive/BPE_Gage.pdf)
+11. [Word, Subword, and Character-Based Tokenization: Know the Difference](https://towardsdatascience.com/word-subword-and-character-based-tokenization-know-the-difference-ea0976b64e17)
+12. [Google Sentencepiece : Unsupervised Text Tokenizer](https://github.com/google/sentencepiece)
+13. [A New Algorithm for Data Compression](https://www.derczynski.com/papers/archive/BPE_Gage.pdf)
+14. [Byte-Pair Encoding Tokenization](https://huggingface.co/course/chapter6/5)
+15. [Byte-Pair Encoding Algorithm](https://leimao.github.io/blog/Byte-Pair-Encoding/)
