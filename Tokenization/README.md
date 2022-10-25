@@ -32,7 +32,7 @@ tokenization. The subword splitting will help the model learn that the words wit
 
     <p align="center">
         <img src="./../Assets/tokenization/nltk.jpg"><br/>
-        <a href="https://udemy.com/course/python-for-data-science-and-machine-learning-bootcamp"><i>Image source</i><a/>
+        <a href="https://udemy.com/course/python-for-data-science-and-machine-learning-bootcamp"><i>[Image source]</i><a/>
     <p/>
 
 
@@ -50,7 +50,7 @@ tokenization. The subword splitting will help the model learn that the words wit
 
     <p align="center">
       <img src="./../Assets/tokenization/spacy.jpg"><br/>
-      <a href="https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/"><i>Source</i><a/>
+      <a href="https://machinelearningknowledge.ai/complete-guide-to-spacy-tokenizer-with-examples/"><i>[Source]</i><a/>
     <p/>
 
 
@@ -113,8 +113,52 @@ tokenization. The subword splitting will help the model learn that the words wit
 
     <p align="center">
       <img src="./../Assets/tokenization/bpe.jpg"><br/>
-      <a href="https://www.computer.org/csdl/journal/tb/2020/05/08678449/1nJsrGwiJqg"><i>Image Source</i><a/>
+      <a href="https://www.computer.org/csdl/journal/tb/2020/05/08678449/1nJsrGwiJqg"><i>[Image Source]</i><a/>
     <p/>
+
+
+- ### [WordPiece Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/wordpiece.ipynb)
+    
+    WordPiece and BPE are two similar and commonly used techniques to segment words into subword-level in NLP tasks.
+    In both cases, the vocabulary is initialized with all the individual characters in the language, and then the
+    most frequent/likely combinations of the symbols in the vocabulary are iteratively added to the vocabulary.
+    The WordPiece algorithm can be processed as:
+
+    1. Initialize the word unit inventory with all the characters in the text.
+    2. Build a language model on the training data using the inventory from 1.
+    3. Generate a new word unit by combining two units out of the current word inventory to increment the word unit
+       inventory by one. Choose the new word unit out of all the possible ones that increases the likelihood on the
+       training data the most when added to the model.
+    4. Goto step 2 until a predefined limit of word units is reached or the likelihood increase falls below a
+       certain threshold.
+
+    WordPiece and BPE are two similar and commonly used techniques to segment words into subword-level in NLP tasks.
+    In both cases, the vocabulary is initialized with all the individual characters in the language, and then the
+    most frequent/likely combinations of the symbols in the vocabulary are iteratively added to the vocabulary.
+
+    `For Example:`<br/>
+    *Input Text:* she walked . he is a dog walker . i walk <br/>
+    *First 3 BPE Merges:* <br/>
+    1. w a = wa
+    2. l k = lk
+    3. wa lk = walk
+
+    So at this stage, your vocabulary includes all the initial characters, along with wa, lk, and walk.
+    You usually do this for a fixed number of merge operations.
+
+    `How does it handle rare/OOV words?` Quite simply, OOV words are impossible if you use such a segmentation method.
+    Any word which does not occur in the vocabulary will be broken down into subword units. Similarly, for rare words,
+    given that the number of subword merges we used is limited, the word will not occur in the vocabulary, so it will
+    be split into more frequent subwords.
+
+    `How does this help?` Imagine that the model sees the word walking. Unless this word occurs at least a few times
+    in the training corpus, the model can't learn to deal with this word very well. However, it may have the words
+    walked, walker, walks, each occurring only a few times. Without subword segmentation, all these words are
+    treated as completely different words by the model. However, if these get segmented as walk@@ ing, walk@@ ed,
+    etc., notice that all of them will now have walk@@ in common, which will occur much frequently while training,
+    and the model might be able to learn more about it.
+    <br/>
+    *[[Source]](https://stackoverflow.com/questions/55382596/how-is-wordpiece-tokenization-helpful-to-effectively-deal-with-rare-words-proble/55416944#55416944)*
 
 
 ## References
@@ -134,3 +178,7 @@ tokenization. The subword splitting will help the model learn that the words wit
 13. [A New Algorithm for Data Compression](https://www.derczynski.com/papers/archive/BPE_Gage.pdf)
 14. [Byte-Pair Encoding Tokenization](https://huggingface.co/course/chapter6/5)
 15. [Byte-Pair Encoding Algorithm](https://leimao.github.io/blog/Byte-Pair-Encoding/)
+16. [Tokenizers: How Machines Read](https://blog.floydhub.com/tokenization-nlp/)
+17. [WordPiece Tokenization](https://huggingface.co/course/chapter6/6)
+18. [A Fast WordPiece Tokenization System](https://ai.googleblog.com/2021/12/a-fast-wordpiece-tokenization-system.html)
+19. [Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation](https://arxiv.org/abs/1609.08144v2)
