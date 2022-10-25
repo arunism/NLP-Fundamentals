@@ -2,7 +2,8 @@
 *.zip
 *.txt
 *.csv
-results/
+models/
+data/
 
 # exclude data from source control by default
 tensorboard/
