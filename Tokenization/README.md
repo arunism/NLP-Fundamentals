@@ -138,7 +138,7 @@ tokenization. The subword splitting will help the model learn that the words wit
 
     `For Example:`<br/>
     *Input Text:* she walked . he is a dog walker . i walk <br/>
-    *First 3 BPE Merges:* <br/>
+    *First 3 BPE Merges:*
     1. w a = wa
     2. l k = lk
     3. wa lk = walk
