@@ -161,6 +161,27 @@ tokenization. The subword splitting will help the model learn that the words wit
     *[[Source]](https://stackoverflow.com/questions/55382596/how-is-wordpiece-tokenization-helpful-to-effectively-deal-with-rare-words-proble/55416944#55416944)*
 
 
+- ### [Unigram Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/unigram.ipynb)
+    
+    Unlike BPE (which is a frequency-based model), Unigram is a probability based model. We start with a
+    large vocabulary and keep decreasing its size gradually until we reach the desired size. How do we get
+    the base vocabulary? There are multiple ways to do so. Let's pass by a couple of ways here:
+    - Apply BPE on the initial corpus
+    - Consider the most common substrings in pre-tokenized words
+
+    We compute a loss function at each iteration of training. The token that results in the least increase in loss
+    is considered 'least important' and hence removed. Due to financial reasons we don't just remove a single character,
+    but a set of *'p'* characters (*p* being a hyperparameter representing a ratio of characters contributing to
+    the lowest increase in loss).
+
+    `Why the name Unigram?` This is because unigram is the language model that considers each token to be independent
+    of the tokens before it.
+
+  <p align="center">
+    <img src="./../Assets/tokenization/wordpiece.jpg"><br/>
+  <p/>
+
+
 ## References
 
 1. [Tokenization doesn't have to be slow !](https://notebook.community/huggingface/pytorch-transformers/notebooks/01-training-tokenizers)
@@ -182,3 +203,5 @@ tokenization. The subword splitting will help the model learn that the words wit
 17. [WordPiece Tokenization](https://huggingface.co/course/chapter6/6)
 18. [A Fast WordPiece Tokenization System](https://ai.googleblog.com/2021/12/a-fast-wordpiece-tokenization-system.html)
 19. [Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation](https://arxiv.org/abs/1609.08144v2)
+20. [Training BPE, WordPiece, and Unigram Tokenizers from Scratch using Hugging Face](https://towardsdatascience.com/training-bpe-wordpiece-and-unigram-tokenizers-from-scratch-using-hugging-face-3dd174850713)
+21. [Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates](https://arxiv.org/pdf/1804.10959.pdf)
