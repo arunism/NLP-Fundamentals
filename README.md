@@ -8,6 +8,10 @@ to enhance learnings from the basics to the advanced concepts of NLP.
 > even more efficient than those mentioned here. If you know or encounter any of those methods
 > please go ahead and educate us with those methods.
 
+`What is NLP?` Natural Language Processing or NLP for short, is broadly defined as the automatic manipulation of
+natural language, like speech and text, by software. For detailed information about NLP, you may find [this
+article](https://machinelearningmastery.com/natural-language-processing/) useful.
+
 ## Requirements
 
 The program works well with python version >=3.8.0.
@@ -23,3 +27,4 @@ directly from [here](https://drive.google.com/file/d/1VDwAlWoPShYfKjLvpxKbgA15YW
 ## Topics Covered
 
 - [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization)
+- [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/Embedding)
