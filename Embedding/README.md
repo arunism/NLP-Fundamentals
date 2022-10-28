@@ -62,8 +62,51 @@ similar.
     </p>
 
 
+- ### Co-occurrence Matrix
+
+    Generally speaking, a co-occurrence matrix will have specific entities in rows (ER) and columns (EC).
+    The purpose of this matrix is to present the number of times each ER appears in the same context as each EC.
+    As a consequence, in order to use a co-occurrence matrix, you have to define your entites and the context
+    in which they co-occur.
+
+    In NLP, the most classic approach is to define each entity (ie, lines and columns) as a word present in a text,
+    and the context as a sentence.
+
+    *Consider the following text:*
+    > Roses are red. Sky is blue.
+
+    With the classic approach described before, we'll have the following matrix:
+
+              |  Roses | are | red | Sky | is | blue
+        Roses |    1   |  1  |  1  |  0  |  0 |   0
+        are   |    1   |  1  |  1  |  0  |  0 |   0
+        red   |    1   |  1  |  1  |  0  |  0 |   0
+        Sky   |    0   |  0  |  0  |  1  |  1 |   1
+        is    |    0   |  0  |  0  |  1  |  1 |   1
+        Blue  |    0   |  0  |  0  |  1  |  1 |   1
+
+    Here, each cell indicates wether the two items co-occur or not. You may replace it with the number of times
+    it appears, or with a more sophisticated approach. You may also change the entities themselves, by putting
+    nouns in columns and adjective in lines instead of every word.
+
+    `What are they used for in NLP?` The most evident use of these matrix is their ability to provide links
+    between notions. Let's suppose you're working on products reviews. Let's also suppose for simplicity that
+    each review is only composed of short sentences. You'll have something like that:
+
+    > Product X is amazing.<br/>I hate product Y.
+
+    Representing these reviews as one co-occurrence matrix will enable you associate products with appreciations.
+    <br/>*[[Source]](https://stackoverflow.com/questions/24073030/what-are-co-occurence-matrixes-and-how-are-they-used-in-nlp)*
+
+
 ## References
 
 1. [A Survey on Sentence Embedding Models Performance for Patent Analysis](https://arxiv.org/abs/2206.02690)
 2. [Apply a Simple Bag-of-Words Approach](https://openclassrooms.com/en/courses/6532301-introduction-to-natural-language-processing/6980811-apply-a-simple-bag-of-words-approach)
 3. [Quick Introduction to Bag-of-Words and TF-IDF](https://www.analyticsvidhya.com/blog/2020/02/quick-introduction-bag-of-words-bow-tf-idf/)
+4. [Co-occurrence matrix](https://en.wikipedia.org/wiki/Co-occurrence_matrix)
+5. [Distributional Semantics | Co-Occurrence Matrix](https://medium.com/@imamitsehgal/nlp-series-distributional-semantics-co-occurrence-matrix-31283629951e)
+6. [Word Vectors Intuition and Co-Occurrence Matrices](https://towardsdatascience.com/word-vectors-intuition-and-co-occurence-matrixes-a7f67cae16cd)
+7. [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/pdf/1310.4546.pdf)
+8. [Word2Vec Neural Network from scratch](https://towardsdatascience.com/skip-gram-neural-network-from-scratch-485f2e688238)
+9. [Word2Vec Parameter Learning Explained](https://arxiv.org/pdf/1411.2738.pdf)
