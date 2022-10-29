@@ -99,6 +99,33 @@ similar.
     <br/>*[[Source]](https://stackoverflow.com/questions/24073030/what-are-co-occurence-matrixes-and-how-are-they-used-in-nlp)*
 
 
+- ### Word2Vec
+
+    Word2Vec deals with two different types of words to generate embedding vectors. The word we are looking into
+    is the *Focus Word* and the words surrounding it are the *Context Words*. Word2Vec can be achieved using
+    two methods: Skip-Gram and Common-Bag-of-Words (CBOW).
+
+    `CBOW Model:` The core idea of CBOW is: Given a context word, can we predict the focus word?
+    Let's understand the working of CBOW:
+    1. Construct a vocabulary of size _v_.
+    2. Represent each word using one-hot-encoding. So, each word corresponds to a *v*-dimensional binary vector.
+    3. Pass v-dimensional context vectors as input to a neural network with N-dimensional hidden layer and generate
+       an output vector again of v-dimensions.
+
+    `Skip-Gram Model:` In skip-gram the behaviour gets flipped i.e. it predicts context words given the focus word.
+    In both CBOW and skip-gram we have *k+1* numbers of *NxV* sized vectors. But CBOW has only 1 softmax to train while
+    skip-gram has k softmax to train. So, it is obvious that skip-gram takes more time to train.
+
+    In both cases the neurons of hidden layer consists of _linear_ activation function while the output layer is
+    associated with *softmax* activation function. All the neurons are fully connected. It has been experienced that
+    skip-gram works well with small amount of data and is found to represent rare words well while CBOW is faster
+    and has better representations for more frequent words.
+
+    <p align="center">
+      <img src="./../Assets/embedding/w2v.jpg"><br/>
+    </p>
+
+
 ## References
 
 1. [A Survey on Sentence Embedding Models Performance for Patent Analysis](https://arxiv.org/abs/2206.02690)
