@@ -26,5 +26,13 @@ directly from [here](https://drive.google.com/file/d/1VDwAlWoPShYfKjLvpxKbgA15YW
 
 ## Topics Covered
 
-- [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization)
-- [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/Embedding)
+- [x] [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization)
+- [x] [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/Embedding)
+- [ ] [Algorithms]()
+- [ ] [Classification]()
+- [ ] [Generation]()
+- [ ] [Clustering]()
+- [ ] [Ranking]()
+- [ ] [Question-Answering]()
+- [ ] [Chatbot]()
+- [ ] [Recommendation]()
