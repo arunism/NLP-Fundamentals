@@ -62,7 +62,7 @@ similar.
     </p>
 
 
-- ### Co-occurrence Matrix
+- ### [Co-occurrence Matrix]()
 
     Generally speaking, a co-occurrence matrix will have specific entities in rows (ER) and columns (EC).
     The purpose of this matrix is to present the number of times each ER appears in the same context as each EC.
@@ -99,7 +99,7 @@ similar.
     <br/>*[[Source]](https://stackoverflow.com/questions/24073030/what-are-co-occurence-matrixes-and-how-are-they-used-in-nlp)*
 
 
-- ### Word2Vec
+- ### [Word2Vec](https://github.com/arunism/NLP-Fundamentals/blob/master/Embedding/w2v.ipynb)
 
     Word2Vec deals with two different types of words to generate embedding vectors. The word we are looking into
     is the *Focus Word* and the words surrounding it are the *Context Words*. Word2Vec can be achieved using
@@ -126,6 +126,20 @@ similar.
     </p>
 
 
+- ### [Glove](https://github.com/arunism/NLP-Fundamentals/blob/master/Embedding/glove.ipynb)
+
+    GloVe stands for Global Vectors for word representation and was developed by researchers at Stanford University.
+    It is unsupervised learning algorithm aiming to generate word embeddings by aggregating global word co-occurrence
+    matrices from a given corpus. To start with GloVe, first we have to download the pre-trained model hosted
+    *[here](https://nlp.stanford.edu/projects/glove/)*. A total of four pre-trained models are available there. Get your own choice.
+
+    The basic idea behind the GloVe word embedding is to derive the relationship between the words from statistics.
+    
+    <p align="center">
+        <img src="./../Assets/embedding/glove.jpg"><br/>
+    </p>
+
+
 ## References
 
 1. [A Survey on Sentence Embedding Models Performance for Patent Analysis](https://arxiv.org/abs/2206.02690)
@@ -137,3 +151,7 @@ similar.
 7. [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/pdf/1310.4546.pdf)
 8. [Word2Vec Neural Network from scratch](https://towardsdatascience.com/skip-gram-neural-network-from-scratch-485f2e688238)
 9. [Word2Vec Parameter Learning Explained](https://arxiv.org/pdf/1411.2738.pdf)
+10. [Stack Overflow Semantic Search](https://medium.com/@shekharsingh441991/stack-overflow-semantic-search-4fd1df286cee)
+11. [NLP — Word Embedding & GloVe](https://jonathan-hui.medium.com/nlp-word-embedding-glove-5e7f523999f6)
+12. [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf)
+13. [Intuitive Guide to Understanding GloVe Embeddings](https://towardsdatascience.com/light-on-math-ml-intuitive-guide-to-understanding-glove-embeddings-b13b4f19c010)
