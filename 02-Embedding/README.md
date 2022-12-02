@@ -77,13 +77,14 @@ similar.
 
     With the classic approach described before, we'll have the following matrix:
 
-              |  Roses | are | red | Sky | is | blue
-        Roses |    1   |  1  |  1  |  0  |  0 |   0
-        are   |    1   |  1  |  1  |  0  |  0 |   0
-        red   |    1   |  1  |  1  |  0  |  0 |   0
-        Sky   |    0   |  0  |  0  |  1  |  1 |   1
-        is    |    0   |  0  |  0  |  1  |  1 |   1
-        Blue  |    0   |  0  |  0  |  1  |  1 |   1
+|| Roses | are | red | Sky | is | blue |
+| :- | :-: | :-: | :-: | :-: | :-: | :-: |
+| Roses | 1 | 1 | 1 | 0 | 0 | 0 |
+| are | 1 | 1 | 1 | 0 | 0 | 0 |
+| red | 1 | 1 | 1 | 0 | 0 | 0 |
+| Sky | 0 | 0 | 0 | 1 | 1 | 1 |
+| is | 0 | 0 | 0 | 1 | 1 | 1 |
+| Blue | 0| 0 | 0 | 1 | 1 | 1 |
 
     Here, each cell indicates wether the two items co-occur or not. You may replace it with the number of times
     it appears, or with a more sophisticated approach. You may also change the entities themselves, by putting
