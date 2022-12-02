@@ -26,13 +26,13 @@ directly from [here](https://drive.google.com/file/d/1VDwAlWoPShYfKjLvpxKbgA15YW
 
 ## Topics Covered
 
-- [x] [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization)
-- [x] [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/Embedding)
-- [ ] [Algorithms](https://github.com/arunism/NLP-Fundamentals/blob/master/Algorithms)
-- [ ] [Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/Classification)
-- [ ] [Generation](https://github.com/arunism/NLP-Fundamentals/blob/master/Generation)
-- [ ] [Clustering](https://github.com/arunism/NLP-Fundamentals/blob/master/Clustering)
-- [ ] [Ranking](https://github.com/arunism/NLP-Fundamentals/blob/master/Ranking)
-- [ ] [Question-Answering](https://github.com/arunism/NLP-Fundamentals/blob/master/Question-Answering)
-- [ ] [Chatbot](https://github.com/arunism/NLP-Fundamentals/blob/master/Chatbot)
-- [ ] [Recommendation](https://github.com/arunism/NLP-Fundamentals/blob/master/Recommendation)
+- [x] [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization)
+- [x] [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding)
+- [ ] [Algorithms](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms)
+- [ ] [Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification)
+- [ ] [Generation](https://github.com/arunism/NLP-Fundamentals/blob/master/05-Generation)
+- [ ] [Clustering](https://github.com/arunism/NLP-Fundamentals/blob/master/06-Clustering)
+- [ ] [Ranking](https://github.com/arunism/NLP-Fundamentals/blob/master/07-Ranking)
+- [ ] [Question-Answering](https://github.com/arunism/NLP-Fundamentals/blob/master/08-Question-Answering)
+- [ ] [Chatbot](https://github.com/arunism/NLP-Fundamentals/blob/master/09-Chatbot)
+- [ ] [Recommendation](https://github.com/arunism/NLP-Fundamentals/blob/master/10-Recommendation)
