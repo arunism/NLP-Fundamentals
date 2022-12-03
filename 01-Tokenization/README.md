@@ -2,9 +2,7 @@
 
 Tokenization is one of the first steps in NLP pipeline. It is a technique to split a sentence, phrase, paragraph or an entire document to smaller units. These smaller units are called tokens. Tokens must not always be words. It can be anything — a word, a subword, or a character.
 
-<p align="center">
-    <img src="./../assets/tokenization/tokenization.jpg"><br/>
-<p/>
+![](./../assets/tokenization/tokenization.jpg)
 
 As illustrated in the figure above, tokenization is primarily categorised to three different groups.
 A `word-based` tokenization algorithm will break a text into words based on a delimiter. This technique leads to massive vocabulary size and large number of out of vocabulary (OOV) tokens which then leads to heavier model and loss of information as the model will not learn anything about the OOV words. `Character-based` tokenizers split the raw text into individual characters. This results in a very small vocabulary and no or very few OOV tokens. The space and time complexity is reduced. Yet this technique is not considered the best because it results in very long sequences and a character does not carry useful meaning unlike a word that does. A solution between these two techniques is `subword-based` tokenization. The subword splitting will help the model learn that the words with the same root word (“tokens” and “tokenizing” with root word "token") are similar in meaning. Subword-based tokenization algorithms uses the following principles:
@@ -18,15 +16,15 @@ Tokenization helps splitting of unstructured data or text into chunks of informa
 
 ## Methods Included
 
-- [x] [NLTK Tokenizers](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/01-NLTK.ipynb)
-- [x] [Spacy Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/02-Spacy.ipynb)
-- [x] [TextBlob Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/03-TextBlob.ipynb)
-- [x] [TorchText Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/04-TorchText.ipynb)
-- [x] [TensorFlow Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/05-Tensorflow.ipynb)
-- [x] [Gensim Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/06-Gensim.ipynb)
-- [x] [Byte-Pair Encoding](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/07-BPE.ipynb)
-- [x] [WordPiece Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/08-WordPiece.ipynb)
-- [x] [Unigram Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/Tokenization/09-Unigram.ipynb)
+- [x] [NLTK Tokenizers](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/01-NLTK.ipynb)
+- [x] [Spacy Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/02-Spacy.ipynb)
+- [x] [TextBlob Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/03-TextBlob.ipynb)
+- [x] [TorchText Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/04-TorchText.ipynb)
+- [x] [TensorFlow Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/05-Tensorflow.ipynb)
+- [x] [Gensim Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/06-Gensim.ipynb)
+- [x] [Byte-Pair Encoding](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/07-BPE.ipynb)
+- [x] [WordPiece Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/08-WordPiece.ipynb)
+- [x] [Unigram Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/09-Unigram.ipynb)
 
 
 ## References
