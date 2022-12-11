@@ -1,9 +1,7 @@
 # project specific
 *.zip
-*.txt
 *.csv
 models/
-data/
 
 # exclude data from source control by default
 tensorboard/
