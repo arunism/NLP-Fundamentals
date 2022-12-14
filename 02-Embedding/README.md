@@ -14,6 +14,10 @@ Word embedding is a technique of representing individual words as a vector of nu
 - [x] [Co-occurrence Matrix](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/03-Cooccurance-Matrix.ipynb)
 - [x] [Word2Vec](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/04-Word2Vec.ipynb)
 - [x] [Glove](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/05-Glove.ipynb)
+- [x] [FastText](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/06-FastText.ipynb)
+- [x] [ELMo](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/07-ELMo.ipynb)
+- [ ] [GPT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/08-GPT.ipynb)
+- [ ] [BERT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/09-BERT.ipynb)
 
 
 ## References
@@ -32,3 +36,6 @@ Word embedding is a technique of representing individual words as a vector of nu
 12. [GloVe: Global Vectors for Word Representation](https://nlp.stanford.edu/pubs/glove.pdf)
 13. [Intuitive Guide to Understanding GloVe Embeddings](https://towardsdatascience.com/light-on-math-ml-intuitive-guide-to-understanding-glove-embeddings-b13b4f19c010)
 14. [Getting started with NLP: Word Embeddings, GloVe and Text classification](https://edumunozsala.github.io/BlogEms/jupyter/nlp/classification/embeddings/python/2020/08/15/Intro_NLP_WordEmbeddings_Classification.html)
+15. [Deep contextualized word representations](https://arxiv.org/abs/1802.05365)
+16. [Dissecting Contextual Word Embeddings: Architecture and Representation](https://arxiv.org/abs/1808.08949)
+17. [AllenNLP: A Deep Semantic Natural Language Processing Platform](https://arxiv.org/abs/1803.07640)
