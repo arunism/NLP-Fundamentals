@@ -16,8 +16,8 @@ Word embedding is a technique of representing individual words as a vector of nu
 - [x] [Glove](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/05-Glove.ipynb)
 - [x] [FastText](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/06-FastText.ipynb)
 - [x] [ELMo](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/07-ELMo.ipynb)
-- [ ] [GPT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/08-GPT.ipynb)
-- [ ] [BERT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/09-BERT.ipynb)
+- [ ] [BERT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/08-BERT.ipynb)
+- [ ] [GPT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/09-GPT.ipynb)
 
 
 ## References
@@ -39,3 +39,6 @@ Word embedding is a technique of representing individual words as a vector of nu
 15. [Deep contextualized word representations](https://arxiv.org/abs/1802.05365)
 16. [Dissecting Contextual Word Embeddings: Architecture and Representation](https://arxiv.org/abs/1808.08949)
 17. [AllenNLP: A Deep Semantic Natural Language Processing Platform](https://arxiv.org/abs/1803.07640)
+18. [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](http://jalammar.github.io/illustrated-bert/)
+19. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+20. [NLP: Contextualized word embeddings from BERT](https://towardsdatascience.com/nlp-extract-contextualized-word-embeddings-from-bert-keras-tf-67ef29f60a7b)
