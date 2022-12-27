@@ -14,7 +14,7 @@ A `word-based` tokenization algorithm will break a text into words based on a de
 
 Tokenization helps splitting of unstructured data or text into chunks of information. These chunks represent the discrete elements whose occurrences in a corpus document can be represented as a vector of the corresponding document. This way the unstructured data can be represented as a numerical data structure which can be fed directly to machine learning algorithm.
 
-## Methods Included
+## Includes
 
 - [x] [NLTK Tokenizers](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/01-NLTK.ipynb)
 - [x] [Spacy Tokenizer](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization/02-Spacy.ipynb)

@@ -7,7 +7,7 @@ Word embedding is a technique of representing individual words as a vector of nu
 *[[Image Source]](https://www.researchgate.net/publication/361134482_A_Survey_on_Sentence_Embedding_Models_Performance_for_Patent_Analysis/figures?lo=1)*
 
 
-## Methods Included
+## Includes
 
 - [x] [Bag of Words](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/01-BoW.ipynb)
 - [x] [TF-IDF](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/02-TFIDF.ipynb)
