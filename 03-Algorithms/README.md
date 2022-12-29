@@ -1,7 +1,7 @@
 # NLP Algorithms and Architectures
 
 
-## Methods Included
+## Includes
 
 - [x] [PCA](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/01-PCA.ipynb)
 - [ ] [Data Augmentation](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/02-Data-Augmentation.ipynb)
@@ -14,7 +14,7 @@
 - [ ] [Loung Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/09-Loung-Attention.ipynb)
 - [ ] [Bahdanau Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/10-Bahdanau-Attention.ipynb)
 - [ ] [Transformer](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/11-Transformer.ipynb)
-[ ] [Pointer Network](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/12-Pointer-Network.ipynb)
+- [ ] [Pointer Network](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/12-Pointer-Network.ipynb)
 
 
 ## References

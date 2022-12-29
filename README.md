@@ -21,14 +21,13 @@ All the other required packages are mentioned alongside their respective demos.
 
 ## Dataset
 
-The data used here is the popular Shakespeare-Writings dataset. You can download your copy of dataset
-directly from [here](https://drive.google.com/file/d/1VDwAlWoPShYfKjLvpxKbgA15YW_wr4Z-/view?usp=sharing).
+I have worked with different datasets for different tasks included here. To know more about the datasets used refer to this [link](https://github.com/arunism/NLP-Fundamentals/tree/master/data).
 
 ## Topics Covered
 
 - [x] [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization)
 - [x] [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding)
-- [ ] [Algorithms](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms)
+- [x] [Algorithms](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms)
 - [ ] [Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification)
 - [ ] [Generation](https://github.com/arunism/NLP-Fundamentals/blob/master/05-Generation)
 - [ ] [Clustering](https://github.com/arunism/NLP-Fundamentals/blob/master/06-Clustering)
