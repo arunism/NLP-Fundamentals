@@ -33,3 +33,16 @@ class EasyDataAugmentation:
                 break
         return ' '.join(words)
     
+    def random_deletion(self, words, p):
+        words = words.split()
+        if len(words) == 1:    # obviously, if there's only one word, don't delete it
+            return words
+        new_words = []   # randomly delete words with probability p
+        for word in words:
+            r = random.uniform(0, 1)
+            if r > p:
+                new_words.append(word)
+        if len(new_words) == 0:    # if you end up deleting all words, just return a random word
+            rand_int = random.randint(0, len(words)-1)
+            return [words[rand_int]]
+        return ' '.join(new_words)
