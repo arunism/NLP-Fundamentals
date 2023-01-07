@@ -46,3 +46,22 @@ class EasyDataAugmentation:
             rand_int = random.randint(0, len(words)-1)
             return [words[rand_int]]
         return ' '.join(new_words)
+
+    def swap_word(self, new_words):
+        random_idx_1 = random.randint(0, len(new_words)-1)
+        random_idx_2 = random_idx_1
+        counter = 0
+        while random_idx_2 == random_idx_1:
+            random_idx_2 = random.randint(0, len(new_words)-1)
+            counter += 1
+            if counter > 3:
+                return new_words
+        new_words[random_idx_1], new_words[random_idx_2] = new_words[random_idx_2], new_words[random_idx_1] 
+        return new_words
+    
+    def random_swap(self, words, n):
+        words = words.split()
+        new_words = words.copy()
+        for _ in range(n):    # n is the number of words to be swapped
+            new_words = self.swap_word(new_words)
+        return ' '.join(new_words)
