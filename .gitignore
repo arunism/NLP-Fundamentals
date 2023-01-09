@@ -1,6 +1,5 @@
 # project specific
 *.zip
-*.csv
 models/
 results/
 
