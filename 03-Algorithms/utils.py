@@ -1,3 +1,4 @@
+import nltk
 import random
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
@@ -5,9 +6,11 @@ from nltk.corpus import stopwords
 
 class EasyDataAugmentation:
     def __init__(self) -> None:
+        # nltk.download('stopwords')
         self.stop_words = set(stopwords.words('english'))
     
     def get_synonyms(self, word):
+        # nltk.download('wordnet')
         synonyms = set()
         for syn in wordnet.synsets(word):
             for l in syn.lemmas():
@@ -18,7 +21,7 @@ class EasyDataAugmentation:
             synonyms.remove(word)
         return list(synonyms)
 
-    def synonym_replacement(self, words, n):
+    def synonym_replacement(self, words, n=2):
         words = words.split()
         random_word_list = list(set([word for word in words if word not in self.stop_words]))
         random.shuffle(random_word_list)
@@ -32,15 +35,22 @@ class EasyDataAugmentation:
             if num_replaced >= n: #only replace up to n words
                 break
         return ' '.join(words)
+
+    def random_insertion(self, words, n=2):
+        words = words.split()
+        new_words = words.copy()
+        for _ in range(n):
+            self.add_word(new_words)
+        return ' '.join(new_words)
     
-    def random_deletion(self, words, p):
+    def random_deletion(self, words, n=2):
         words = words.split()
         if len(words) == 1:    # obviously, if there's only one word, don't delete it
             return words
         new_words = []   # randomly delete words with probability p
         for word in words:
             r = random.uniform(0, 1)
-            if r > p:
+            if r > n:
                 new_words.append(word)
         if len(new_words) == 0:    # if you end up deleting all words, just return a random word
             rand_int = random.randint(0, len(words)-1)
@@ -71,15 +81,8 @@ class EasyDataAugmentation:
         random_synonym = synonyms[0]
         random_idx = random.randint(0, len(new_words)-1)
         new_words.insert(random_idx, random_synonym)
-            
-    def random_insertion(self, words, n):
-        words = words.split()
-        new_words = words.copy()
-        for _ in range(n):
-            self.add_word(new_words)
-        return ' '.join(new_words)
     
-    def random_swap(self, words, n):
+    def random_swap(self, words, n=2):
         words = words.split()
         new_words = words.copy()
         for _ in range(n):    # n is the number of words to be swapped
