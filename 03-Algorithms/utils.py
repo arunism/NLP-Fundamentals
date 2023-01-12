@@ -4,6 +4,18 @@ from nltk.corpus import wordnet
 from nltk.corpus import stopwords
 
 
+class Preprocess:
+    def clean(self, sentence):
+        pass
+
+    def embedding(self, sentence):
+        pass
+
+    def preprocess(self, sentence):
+        self.clean(sentence)
+        return self.embedding(sentence)
+
+
 class EasyDataAugmentation:
     def __init__(self) -> None:
         # nltk.download('stopwords')
