@@ -6,7 +6,7 @@
 - [x] [PCA](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/01-PCA.ipynb)
 - [x] [Data Augmentation](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/02-Data-Augmentation.ipynb)
 - [x] [Entity Resolution](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/03-Entity-Resolution.ipynb)
-- [ ] [Naive Bayes](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/04-Naive-Bayes.ipynb)
+- [x] [Naive Bayes](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/04-Naive-Bayes.ipynb)
 - [ ] [LDA](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/05-LDA.ipynb)
 - [ ] [RNN](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/06-RNN.ipynb)
 - [ ] [GRU](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/07-GRU.ipynb)
