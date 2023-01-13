@@ -1,18 +1,22 @@
+import re
 import nltk
 import random
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 class Preprocess:
     def clean(self, sentence):
-        pass
+        cleanp = re.sub(r'[?|$|.|!]',r'', sentence)
+        return re.sub(r'[.|,|)|(|\|/]',r' ', cleanp)
 
     def embedding(self, sentence):
-        pass
+        vectorizer = TfidfVectorizer()
+        return vectorizer.fit_transform(sentence)
 
     def preprocess(self, sentence):
-        self.clean(sentence)
+        sentence = self.clean(sentence)
         return self.embedding(sentence)
 
 
@@ -44,7 +48,7 @@ class EasyDataAugmentation:
                 synonym = random.choice(list(synonyms))
                 words = [synonym if word == random_word else word for word in words]
                 num_replaced += 1
-            if num_replaced >= n: #only replace up to n words
+            if num_replaced >= n: # Replace n words at max
                 break
         return ' '.join(words)
 
@@ -57,9 +61,9 @@ class EasyDataAugmentation:
     
     def random_deletion(self, words, n=2):
         words = words.split()
-        if len(words) == 1:    # obviously, if there's only one word, don't delete it
+        if len(words) == 1:    # If there's only one word, don't delete it
             return words
-        new_words = []   # randomly delete words with probability p
+        new_words = []   # Randomly delete words with probability p
         for word in words:
             r = random.uniform(0, 1)
             if r > n:
