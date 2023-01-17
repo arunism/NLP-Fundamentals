@@ -3,21 +3,11 @@ import nltk
 import random
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 
-class Preprocess:
-    def clean(self, sentence):
-        cleanp = re.sub(r'[?|$|.|!]',r'', sentence)
-        return re.sub(r'[.|,|)|(|\|/]',r' ', cleanp)
-
-    def embedding(self, sentence):
-        vectorizer = TfidfVectorizer()
-        return vectorizer.fit_transform(sentence)
-
-    def preprocess(self, sentence):
-        sentence = self.clean(sentence)
-        return self.embedding(sentence)
+def clean(sentence):
+    sentence = re.sub(r'[?|$|.|!]',r'', sentence.lower())
+    return  re.sub(r'[.|,|)|(|\|/]',r' ', sentence)
 
 
 class EasyDataAugmentation:
