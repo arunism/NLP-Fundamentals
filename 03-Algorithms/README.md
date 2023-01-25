@@ -10,12 +10,13 @@
 - [x] [RNN](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/05-RNN.ipynb)
 - [x] [LSTM](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/06-LSTM.ipynb)
 - [x] [GRU](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/07-GRU.ipynb)
-- [ ] [Loung Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/08-Loung-Attention.ipynb)
+- [x] [Sequence to Sequence](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/08-Seq2seq.ipynb)
 - [ ] [Bahdanau Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/09-Bahdanau-Attention.ipynb)
-- [ ] [Transformer](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/10-Transformer.ipynb)
-- [ ] [Pointer Network](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/11-Pointer-Network.ipynb)
+- [ ] [Luong Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/10-Luong-Attention.ipynb)
+- [ ] [Transformer](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/11-Transformer.ipynb)
+- [ ] [Pointer Network](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/12-Pointer-Network.ipynb)
 
 
 ## References
 
-Please check the bottom of each notebook for references. Each notebook has their own references.
+Please check the bottom of each notebook for references. Each notebook consists of respective references.
