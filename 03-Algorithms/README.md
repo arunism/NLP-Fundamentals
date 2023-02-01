@@ -11,10 +11,11 @@
 - [x] [LSTM](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/06-LSTM.ipynb)
 - [x] [GRU](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/07-GRU.ipynb)
 - [x] [Sequence to Sequence](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/08-Seq2seq.ipynb)
-- [ ] [Bahdanau Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/09-Bahdanau-Attention.ipynb)
+- [x] [Bahdanau Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/09-Bahdanau-Attention.ipynb)
 - [ ] [Luong Attention](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/10-Luong-Attention.ipynb)
-- [ ] [Transformer](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/11-Transformer.ipynb)
-- [ ] [Pointer Network](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/12-Pointer-Network.ipynb)
+- [x] [Pack Padded Sequences](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/11-Pack-Padded-Sequences.ipynb)
+- [x] [Transformer](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/12-Transformer.ipynb)
+- [ ] [Pointer Network](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms/13-Pointer-Network.ipynb)
 
 
 ## References
