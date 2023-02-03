@@ -5,7 +5,7 @@ This is the list of datasets used for different tasks included in this repositor
 | Task | Dataset ||
 |---|---|---|
 | Document Classification |  | [Download]() |
-| Sentiment Analysis |  | [Download]() |
+| Sentiment Analysis | IMDB Dataset | [Download](http://ai.stanford.edu/~amaas/data/sentiment/) |
 | Quora Question Pair Classification |  | [Download]() |
 | Toxic Comment Classification |  | [Download]() |
 | Part-of-Speech (POS) Tagging |  | [Download]() |
