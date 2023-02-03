@@ -28,7 +28,7 @@ I have worked with different datasets for different tasks included here. To know
 - [x] [Tokenization](https://github.com/arunism/NLP-Fundamentals/blob/master/01-Tokenization)
 - [x] [Embedding](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding)
 - [x] [Algorithms](https://github.com/arunism/NLP-Fundamentals/blob/master/03-Algorithms)
-- [ ] [Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification)
+- [x] [Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification)
 - [ ] [Generation](https://github.com/arunism/NLP-Fundamentals/blob/master/05-Generation)
 - [ ] [Clustering](https://github.com/arunism/NLP-Fundamentals/blob/master/06-Clustering)
 - [ ] [Ranking](https://github.com/arunism/NLP-Fundamentals/blob/master/07-Ranking)
