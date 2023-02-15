@@ -4,7 +4,7 @@ This is the list of datasets used for different tasks included in this repositor
 
 | Task | Dataset ||
 |---|---|---|
-| Document Classification |  | [Download]() |
+| Document Classification |  | [Download](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset) |
 | Sentiment Analysis | IMDB Dataset | [Download](http://ai.stanford.edu/~amaas/data/sentiment/) |
 | Quora Question Pair Classification |  | [Download]() |
 | Toxic Comment Classification |  | [Download]() |
