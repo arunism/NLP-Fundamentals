@@ -2,7 +2,7 @@
 
 ## Includes
 
-- [ ] [Document Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification/01-Document-Classification)
+- [x] [Document Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification/01-Document-Classification)
 - [x] [Sentiment Analysis](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification/02-Sentiment-Analysis)
 - [ ] [Quora Question Pair Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification/03-Quora-Question)
 - [ ] [Toxic Comment Classification](https://github.com/arunism/NLP-Fundamentals/blob/master/04-Classification/04-Toxic-Comment)
