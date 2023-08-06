@@ -17,7 +17,7 @@ Word embedding is a technique of representing individual words as a vector of nu
 - [x] [FastText](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/06-FastText.ipynb)
 - [x] [ELMo](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/07-ELMo.ipynb)
 - [x] [BERT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/08-BERT.ipynb)
-- [ ] [GPT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/09-GPT.ipynb)
+- [x] [GPT](https://github.com/arunism/NLP-Fundamentals/blob/master/02-Embedding/09-GPT.ipynb)
 
 
 ## References
